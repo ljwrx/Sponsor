@@ -84,7 +84,6 @@ body:before
 {
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
-    -o-transform: rotate(3deg);
     -ms-transform: rotate(3deg);
     transform: rotate(3deg);
     right: 10px;
@@ -227,7 +226,7 @@ fieldset
 
 #submit:active
 {
-    outline: none;/*绘制于边框外围的一条线*/
+    outline: none;
 
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
