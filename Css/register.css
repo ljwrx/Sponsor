@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'Allan';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Allan Bold'), local('Allan-Bold'), url(http://themes.googleusercontent.com/static/fonts/allan/v5/HDuJMALbbJ3Ny_JtXeABSfesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #b3b4b7;
+    text-align: center;
+}
+
+h1
+{
+    font-family: 'Allan', serif;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    margin: 20px 0;
+}
+
+body:before
+{
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+#box
+{
+    position: relative;
+    width: 36%;
+    background: #ddd;
+    background: -moz-linear-gradient(left, #ddd, #F3F3F3 50%, #ddd);
+    background: -webkit-gradient(linear, left top, right top, from(#ddd),
+    color-stop(0.5, #F3F3F3), to(#ddd));
+    background: -webkit-linear-gradient(left, #ddd, #F3F3F3 50%, #ddd);
+
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 2em 1.5em;
+    color: rgba(0,0,0, .8);
+    text-shadow: 0 1px 0 #fff;
+    line-height: 1.5;
+    margin: 60px auto;
+}
+
+
+#box:before, #box:after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+#box:after
+{
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.control-label {
+    font-size: 20px;
+}
+
+.control-label2 {
+    margin-left: -5%;
+    font-size: 20px;
+}
+
+.control-label3 {
+    margin-right: 45%;
+    font-size: 20px;
+}
+
+.other {
+    margin-right: 11%;
+}
+
+#inputs input
+{
+    background: #f1f1f1;
+    padding: 8px 8px 8px 15px;
+    margin: 0 0 10px 0;
+    width: 290px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#inputs input:focus
+{
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+.regular-radio {
+    display: none;
+}
+
+.regular-radio + label {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.regular-radio:checked + label:after {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    background: #99a1a7;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+    text-shadow: 0px;
+    left: 3px;
+    font-size: 32px;
+}
+
+.regular-radio:checked + label {
+    background-color: #e9ecee;
+    color: #99a1a7;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+#submit
+{
+    margin: -8px 170px;
+    background-color: #11ff55;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#A0FF86), to(#11ff55));
+    background-image: -webkit-linear-gradient(top, #A0FF86, #11ff55);
+    background-image: -moz-linear-gradient(top, #A0FF86, #11ff55);
+    background-image: -ms-linear-gradient(top, #A0FF86, #11ff55);
+    background-image: linear-gradient(top, #A0FF86, #11ff55);
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #A0FF86 #11ff55 #11ff55 #11ff55;
+
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+}
+
+#submit:hover,#submit:focus
+{
+    background-color: #A0FF86;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#11ff55), to(#A0FF86));
+    background-image: -webkit-linear-gradient(top, #11ff55, #A0FF86);
+    background-image: -moz-linear-gradient(top, #11ff55, #A0FF86);
+    background-image: -ms-linear-gradient(top, #11ff55, #A0FF86);
+    background-image: -o-linear-gradient(top, #11ff55, #A0FF86);
+    background-image: linear-gradient(top, #11ff55, #A0FF86);
+}
+
+#submit:active
+{
+    outline: none;/*绘制于边框外围的一条线*/
+
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+#submit::-moz-focus-inner
+{
+    border: none;
+}
+
+#back
+{
+    display: block;
+    text-align: center;
+    position: relative;
+    color: #999;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#back:hover,#back:focus
+{
+    color: #993c68;
+    text-decoration: underline;
+}
+
+.error {
+    color: #DD7B65;
+    display: block;
+    position: absolute;
+    margin-top: -8px;
+    max-height: 50px;
+    max-width: 145px;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.succeed {
+    font-size: 15px;
+    color: #09dd22;
+    display: block;
+    position: absolute;
+    margin-top: -4px;
+    margin-left: 40px;
+    max-height: 20px;
+    max-width: 60px;
+    z-index: 4;
+}

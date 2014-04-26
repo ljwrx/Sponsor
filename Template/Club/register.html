@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh_CN" data-ng-app="clubsign">
+<head>
+    <title>高校赞助网注册</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript" src="../../Lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../../Lib/angular/angular-resource.min.js"></script>
+
+    <script src="../../Lib/jQuery/jquery-1.8.3.min.js"></script>
+
+    <script src="../../Js/Club/sign.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="../../Css/register.css">
+
+    <!--社团名称 地区 负责人 身份证号码 手机号码 年龄 性别 id 网站账号 网站密码-->
+    <!--cludname area principal IDnumber phone age sex id account password-->
+
+</head>
+<body data-ng-controller="clubCtrl">
+
+<form id="box">
+    <h1>社团注册</h1>
+    <fieldset id="inputs">
+        <label class="control-label" for="account">注册账号</label>
+        <input id="account" type="text" data-ng-model="account" placeholder="请输入注册账号" maxlength="8" autofocus required><br>
+        <label class="control-label" for="password">注册密码</label>
+        <input id="password" type="password" data-ng-model="password" placeholder="请输入注册密码" maxlength="8" required><br>
+        <label class="control-label" for="clubname">社团名称</label>
+        <input id="clubname" type="text" data-ng-model="clubname" placeholder="请输入社团名称" maxlength="16" required><br>
+        <label class="control-label" for="area">所在地区</label>
+        <input id="area" type="text" data-ng-model="area" placeholder="请输入所在地区" maxlength="16" required><br>
+        <label class="control-label2" for="principal">负责人姓名</label>
+        <input id="principal" type="text" data-ng-model="principal" placeholder="请输入负责人姓名" maxlength="8" required><br>
+        <label class="control-label" for="IDnumber">身份证号</label>
+        <input id="IDnumber" type="text" data-ng-model="IDnumber" placeholder="请输入身份证号" maxlength="20" required><br>
+        <label class="control-label" for="phone">联系方式</label>
+        <input id="phone" type="text" data-ng-model="phone" placeholder="请输入联系方式" maxlength="16" required><br>
+        <div class="other">
+        <label class="control-label" for="selected">年龄</label>
+        <select data-ng-model="selected" id="selected">
+            <option data-ng-selected="true">请选择</option>
+            <option value="17">17岁</option>
+            <option value="18">18岁</option>
+            <option value="19">19岁</option>
+            <option value="20">20岁</option>
+            <option value="21">21岁</option>
+            <option value="22">22岁</option>
+            <option value="23">23岁</option>
+            <option value="24">24岁</option>
+        </select>
+            <label class="control-label">性别</label>
+            <input type="radio" id="male" value="男" data-ng-model="sex" class="regular-radio" checked /><label for="male"></label>&nbsp;男
+            <input type="radio" id="female" value="女" data-ng-model="sex" class="regular-radio" /><label for="female"></label>&nbsp;女
+        </div><br>
+    </fieldset>
+    <div class="error" data-ng-show="isRegisterError">
+        {{actionStatusMsg}}：{{registerErrorMsg}}
+    </div>
+    <div class="succeed" data-ng-show="registerSucceed">
+        登陆成功
+    </div>
+    <input type="submit" id="submit" value="登陆" data-ng-click="userRegister()"><br><br>
+    <a href="http://127.0.0.1:1013/Sponsor/Template/Club/login.html" id="back">返回登录</a>
+</form>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#selected").keydown(function(e){
+            var curKey = e.which;
+            if(curKey == 13){
+                $("#submit").click();
+                return false;
+            }
+        });
+    });
+</script>
+
+</html>
